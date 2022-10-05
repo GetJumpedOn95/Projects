@@ -1,0 +1,79 @@
+
+
+
+// ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩
+// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
+let unsortedIntegers = [5, 1, 4, 2, 8]
+// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
+// ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧
+
+
+// Add your code below
+func selectionSort(_ array: [Int]) -> [Int] {
+    var a = unsortedIntegers
+    var totalSwaps = 0
+    print("Pass: 0, Swaps: 0/0, Array: \(a)")
+    for x in 0..<a.count-1 {
+//        var swaps = 1
+        let index = x
+        var minIndex = index
+        for y in index..<a.count {
+            if (a[y] < a[minIndex]) {
+                minIndex = y
+            }
+        }
+        if (minIndex != index) {
+            let minValue = a[minIndex]
+            a[minIndex] = a[index]
+            a[index] = minValue
+           
+        }
+        totalSwaps = totalSwaps+1
+            let pass = x + 1
+            print("Pass: \(pass), Swaps: 1/\(totalSwaps), Array: \(a)")
+        
+    }
+    return a
+}
+
+var sortedArray = selectionSort(unsortedIntegers)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

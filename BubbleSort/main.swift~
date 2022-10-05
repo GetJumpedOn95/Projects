@@ -1,0 +1,34 @@
+
+// Add your code below:
+func swap ( integers:inout[Int],firstIndex:Int,secondIndex:Int){
+    let firstIndexValue = integers[firstIndex]
+    let secondIndexValue = integers[secondIndex]
+
+    integers[firstIndex] = secondIndexValue
+    integers[secondIndex] = firstIndexValue
+}
+print("Pass: 0, Swaps: 0/0, Array: \(unsortedIntegers)")    
+
+var integers:[Int] = unsortedIntegers
+var totalCount = 0
+var count = 0
+var size = integers.count
+var pass = 1
+repeat {
+    var index = 0
+    count = 0
+   
+    repeat {
+        index = index + 1
+        let firstIndex:Int = index - 1
+        let secondIndex:Int = index
+        if(integers[secondIndex] < integers[firstIndex]){
+            swap( integers:&integers, firstIndex:firstIndex, secondIndex:secondIndex)
+            count = count + 1
+            totalCount = totalCount + 1
+        }
+    } while (index + 1 < size)
+    print("Pass: \(pass), Swaps: \(count)/\(totalCount), Array: \(integers)")
+
+            pass = pass + 1
+}while(count != 0)
